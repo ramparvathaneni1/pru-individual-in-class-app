@@ -2,7 +2,7 @@
 
 This repo is used for you to work on your personal app after we work on each section of the Todo App together in class.
 
-![](./assets/indivdual-app.png)
+![](./assets/extra_practice.png)
 
 ## To get started
 
