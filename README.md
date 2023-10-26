@@ -13,7 +13,13 @@ This repo is used for you to work on your personal app after we work on each sec
 
    - [You can find Fork and Clone instructions here](https://git.generalassemb.ly/ModernEngineering/getting-started-cohort-4-october-2023#fork-and-clone-lessonslabs)
 
-1. `cd` into the `pru-individual-in-class-app` folder. Inside it, create a new folder: `mkdir backend`.
+1. `cd` into the `pru-individual-in-class-app` folder. Inside it, create a new folder: `mkdir backend`. Please start your app in the `backend` folder.
+
+[Here is today's todo app lesson for reference.](https://git.generalassemb.ly/ModernEngineering/express-to-do-api)
+
+You can start at Step 4 under **Todo App Set-up**
+
+NOTE - you do not need to do the **Configure Postgres in the VM** section again.
 
 ## To submit your work each day
 
