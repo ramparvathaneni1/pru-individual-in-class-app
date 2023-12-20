@@ -2,11 +2,16 @@
 
 This repo is used for you to work on your personal app after we work on each section of the Todo App together in class.
 
-Based on the Todo API we built together you’ll build a brand new app with a model you choose (e.g. - recipe, movie, comic, song).
+Based on the Todo API we built together, you’ll build a brand new app with a model you choose (e.g. recipe, movie, comic, song).
 
-Requirements
+Requirements:
 - The database table must have at least 3 columns/fields
-- Your API must have full CRUD (5 API endpoints: Create, Read (many/one), Update, Delete)
+- Your API must have 5 full CRUD API endpoints:
+  - Create
+  - Read Many
+  - Read One
+  - Update
+  - Delete
 - Create a Postman Collection to test the 5 API endpoints
 
 Node Express Code Along For Reference: https://ga.co/48sBleZ
@@ -26,7 +31,7 @@ Node Express Code Along For Reference: https://ga.co/48sBleZ
 
 You can start at Step 4 under **Todo App Set-up**
 
-NOTE - you do not need to do the **Configure Postgres in the VM** section again.
+*NOTE*: You do not need to do the *Configure Postgres in the VM* section again.
 
 ## To submit your work each day
 
@@ -37,7 +42,7 @@ NOTE - you do not need to do the **Configure Postgres in the VM** section again.
 
 Update your index route to accept query parameters that will make fields filterable and searchable. 
 
-Example: `/movies?title=titanic` would leverage the title query parameter and modify its SQL statement to return results where the title is equal to "titanic"
+Example: `/movies?title=minions` would leverage the title query parameter and modify its SQL statement to return results where the title is equal to "minions"
 
 ## Stretch Goal 2
 
