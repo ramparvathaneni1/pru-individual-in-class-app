@@ -32,3 +32,15 @@ NOTE - you do not need to do the **Configure Postgres in the VM** section again.
 
 1. Commit and push your work to GitHub
 1. Submit a Pull Request
+
+## Stretch Goal 1
+
+Update your index route to accept query parameters that will make fields filterable and searchable. 
+
+Example: `/movies?title=titanic` would leverage the title query parameter and modify its SQL statement to return results where the title is equal to "titanic"
+
+## Stretch Goal 2
+
+Create a second SQL table for users with associated routes in your application, and add a foreign key relating to your first SQL table. 
+
+The detail route retrieving an individual record should be updated to include all related data using JOIN statements.
