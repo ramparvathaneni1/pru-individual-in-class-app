@@ -27,9 +27,10 @@ Node Express Code Along For Reference: https://ga.co/48sBleZ
 
 1. `cd` into the `pru-individual-in-class-app` folder. Inside it, create a new folder: `mkdir backend`. Please start your app in the `backend` folder.
 
-[Here is today's Express To Do API lesson for reference.](https://git.generalassemb.ly/ModernEngineering/express-to-do-api)
-
+[Here is today's Express To Do API lesson for reference.](https://git.generalassemb.ly/ModernEngineering/express-to-do-api). 
 You can start at Step 4 under **Todo App Set-up**
+
+To see the code we completed during the walkthrough, you can go to the [solution branch](https://git.generalassemb.ly/ModernEngineering/express-to-do-api/tree/solution-part-1).
 
 *NOTE*: You do not need to do the *Configure Postgres in the VM* section again.
 
@@ -37,6 +38,8 @@ You can start at Step 4 under **Todo App Set-up**
 
 1. Commit and push your work to GitHub
 1. Submit a Pull Request
+
+For instructions with screenshots on how to fork and clone or submit your work, you can refer to [this document](https://git.generalassemb.ly/ModernEngineering/frequently-asked-questions).
 
 ## Stretch Goal 1
 
