@@ -14,8 +14,10 @@ Requirements:
   - Delete
 - Create a Postman Collection to test the 5 API endpoints
 
-Node Express Code Along For Reference: https://ga.co/48sBleZ
+[Here is today's Express To Do API lesson for reference](https://git.generalassemb.ly/ModernEngineering/express-to-do-api). 
+You can start at Step 4 under **Todo App Set-up**
 
+To see the code we completed during the walkthrough, you can go to the [solution branch](https://git.generalassemb.ly/ModernEngineering/express-to-do-api/tree/solution-part-1).
 
 ## To get started
 
@@ -26,11 +28,6 @@ Node Express Code Along For Reference: https://ga.co/48sBleZ
 1. Clone down your fork using the SSH URL option: `git clone git@git.generalassemb.ly:<THIS_SHOULD_BE_YOUR_USERNAME>/pru-individual-in-class-app.git`.
 
 1. `cd` into the `pru-individual-in-class-app` folder. Inside it, create a new folder: `mkdir backend`. Please start your app in the `backend` folder.
-
-[Here is today's Express To Do API lesson for reference.](https://git.generalassemb.ly/ModernEngineering/express-to-do-api). 
-You can start at Step 4 under **Todo App Set-up**
-
-To see the code we completed during the walkthrough, you can go to the [solution branch](https://git.generalassemb.ly/ModernEngineering/express-to-do-api/tree/solution-part-1).
 
 *NOTE*: You do not need to do the *Configure Postgres in the VM* section again.
 
