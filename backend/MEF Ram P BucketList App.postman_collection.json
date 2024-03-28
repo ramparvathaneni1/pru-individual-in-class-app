@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "b73a1716-fc92-48cf-b0d1-f2df290dd5ac",
+		"name": "MEF Ram P BucketList App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33932066"
+	},
+	"item": [
+		{
+			"name": "GET All BucketList Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/bucketlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"bucketlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BucketList Item By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/bucketlist/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"bucketlist",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE BucketList Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Get Married\",\n    \"risklevel\": \"H\",\n    \"done\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/bucketlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"bucketlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE BucketList Item By ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Run A Full Marathon\",\n    \"risklevel\": \"L\",\n    \"done\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/bucketlist/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"bucketlist",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BucketList Item By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/bucketlist/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"bucketlist",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
