@@ -36,10 +36,13 @@ app.get("/api/bucketlist", (request, response) => {
 
     const title = request.query.title;
     const risklevel = request.query.risklevel;
+    const doneStr = request.query.done;
+    let isDonePresent = doneStr && (doneStr.toUpperCase() === "TRUE" || doneStr.toUpperCase() === "FALSE");
 
     let whereClause = `1 = 1`;
     whereClause += title ? ` AND title ILIKE '%${title}%'` : '';
-    whereClause += risklevel ? ` AND risklevel = '${risklevel}'` : '';
+    whereClause += risklevel ? ` AND risklevel = '${risklevel.toUpperCase()}'` : '';
+    whereClause += isDonePresent ? ` AND done = ${doneStr.toUpperCase() === "TRUE"}` : '';
     let sqlQuery = `SELECT * FROM bucketlist WHERE ${whereClause} ORDER BY id ASC`;
 
     console.log(sqlQuery);

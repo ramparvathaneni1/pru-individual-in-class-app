@@ -25,12 +25,17 @@
 					"query": [
 						{
 							"key": "risklevel",
-							"value": "L",
+							"value": "l",
 							"disabled": true
 						},
 						{
 							"key": "title",
 							"value": "lights",
+							"disabled": true
+						},
+						{
+							"key": "done",
+							"value": "true",
 							"disabled": true
 						}
 					]
@@ -44,7 +49,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/api/bucketlist/5",
+					"raw": "http://localhost:3001/api/bucketlist/7",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -53,7 +58,7 @@
 					"path": [
 						"api",
 						"bucketlist",
-						"5"
+						"7"
 					]
 				}
 			},
@@ -95,7 +100,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Run Full Marathon\",\n    \"risklevel\": \"L\",\n    \"done\": false,\n    \"userid\": 3\n}",
+					"raw": "{\n    \"title\": \"Run Full Marathon\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
