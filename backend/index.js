@@ -31,11 +31,21 @@ app.get("/", (req, res) => {
 });
 
 // GET All BucketList Items
+// STRETCH GOAL 1: Accepting Query Params (title and risklevel) for filtering
 app.get("/api/bucketlist", (request, response) => {
+
+    const title = request.query.title;
+    const risklevel = request.query.risklevel;
+
+    let whereClause = `1 = 1`;
+    whereClause += title ? ` AND title ILIKE '%${title}%'` : '';
+    whereClause += risklevel ? ` AND risklevel = '${risklevel}'` : '';
+    let sqlQuery = `SELECT * FROM bucketlist WHERE ${whereClause} ORDER BY id ASC`;
+
+    console.log(sqlQuery);
+
     pool.query(
-        `SELECT *
-        FROM bucketlist
-        ORDER BY id ASC`,
+        sqlQuery,
         (error, results) => {
             console.log(results);
             if (error) {
@@ -47,7 +57,7 @@ app.get("/api/bucketlist", (request, response) => {
                 response.status(200).json(results.rows);
             } else {
                 response.status(404).json({
-                    message: `Bucketlist Not Found.`
+                    message: `Bucketlist Items Matching Filters Not Found.`
                 });
             }
         }
