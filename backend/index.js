@@ -124,8 +124,11 @@ app.put("/api/bucketlist/:id", (request, response) => {
     const id = parseInt(request.params.id);
     const {title, risklevel, done, userid} = request.body;
     pool.query(
-        `UPDATE bucketlist
-        SET title = $1, risklevel = $2, done = $3, userid = $4
+        `UPDATE bucketlist SET
+            title = COALESCE(NULLIF($1, ''), title),
+            risklevel = COALESCE(NULLIF($2, ''), risklevel),
+            done = COALESCE(NULLIF($3, done), done),
+            userid = COALESCE(NULLIF($4, userid), userid)
         WHERE id = $5`,
         [title, risklevel, done, userid, id],
         (error, results) => {
