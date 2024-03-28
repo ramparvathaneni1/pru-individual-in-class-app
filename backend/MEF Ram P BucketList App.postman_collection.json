@@ -21,6 +21,18 @@
 					"path": [
 						"api",
 						"bucketlist"
+					],
+					"query": [
+						{
+							"key": "risklevel",
+							"value": "L",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "lights",
+							"disabled": true
+						}
 					]
 				}
 			},
