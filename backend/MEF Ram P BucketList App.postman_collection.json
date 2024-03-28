@@ -32,7 +32,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/api/bucketlist/7",
+					"raw": "http://localhost:3001/api/bucketlist/5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -41,7 +41,7 @@
 					"path": [
 						"api",
 						"bucketlist",
-						"7"
+						"5"
 					]
 				}
 			},
@@ -54,7 +54,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Get Married\",\n    \"risklevel\": \"H\",\n    \"done\": true\n}",
+					"raw": "{\n    \"title\": \"Get Married\",\n    \"risklevel\": \"H\",\n    \"done\": false,\n    \"userid\": 3\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -83,7 +83,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Run A Full Marathon\",\n    \"risklevel\": \"L\",\n    \"done\": false\n}",
+					"raw": "{\n    \"title\": \"Run Full Marathon\",\n    \"risklevel\": \"L\",\n    \"done\": false,\n    \"userid\": 3\n}",
 					"options": {
 						"raw": {
 							"language": "json"

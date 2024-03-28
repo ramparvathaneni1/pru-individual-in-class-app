@@ -65,12 +65,15 @@ app.get("/api/bucketlist", (request, response) => {
 });
 
 // GET BucketList Item by ID
+// STRETCH GOAL 2: Getting all details from bucketlist and users table
 app.get("/api/bucketlist/:id", (request, response) => {
     const id = parseInt(request.params.id);
     pool.query(
-        `SELECT *
-        FROM bucketlist
-        WHERE id = $1`,
+        `SELECT b.id, b.title, b.risklevel, b.done, b.userid, u.name, u.age
+        FROM bucketlist b
+        JOIN users u
+            ON b.userid = u.id
+            AND b.id = $1`,
         [id],
         (error, results) => {
             console.log(results);
@@ -92,12 +95,12 @@ app.get("/api/bucketlist/:id", (request, response) => {
 
 // CREATE a New BucketList Item
 app.post("/api/bucketlist", (request, response) => {
-    const {title, risklevel, done} = request.body;
+    const {title, risklevel, done, userid} = request.body;
     pool.query(
-        `INSERT INTO bucketlist (title, risklevel, done)
-        VALUES ($1, $2, $3)
+        `INSERT INTO bucketlist (title, risklevel, done, userid)
+        VALUES ($1, $2, $3, $4)
         RETURNING *`,
-        [title, risklevel, done],
+        [title, risklevel, done, userid],
         (error, results) => {
             console.log(results);
             if (error) {
@@ -119,12 +122,12 @@ app.post("/api/bucketlist", (request, response) => {
 // Update BucketList Item with ID
 app.put("/api/bucketlist/:id", (request, response) => {
     const id = parseInt(request.params.id);
-    const {title, risklevel, done} = request.body;
+    const {title, risklevel, done, userid} = request.body;
     pool.query(
         `UPDATE bucketlist
-        SET title = $1, risklevel = $2, done = $3
-        WHERE id = $4`,
-        [title, risklevel, done, id],
+        SET title = $1, risklevel = $2, done = $3, userid = $4
+        WHERE id = $5`,
+        [title, risklevel, done, userid, id],
         (error, results) => {
             console.log(results);
             if (error) {
