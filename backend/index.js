@@ -27,7 +27,7 @@ app.use(express.json());
 
 // This route will return 'Hi There' when you go to localhost:3001/ in the browser
 app.get("/", (req, res) => {
-  res.send("Hi There");
+  res.send("Yo! Waadup?");
 });
 
 // This tells the express application to listen for requests on port 3001
