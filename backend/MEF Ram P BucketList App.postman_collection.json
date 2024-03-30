@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "GET All BucketList Items",
+			"name": "GET BucketList",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -21,22 +21,39 @@
 					"path": [
 						"api",
 						"bucketlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BucketList By Filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/bucketlist?risklevel=L&title=lights&done=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"bucketlist"
 					],
 					"query": [
 						{
 							"key": "risklevel",
-							"value": "l",
-							"disabled": true
+							"value": "L"
 						},
 						{
 							"key": "title",
-							"value": "lights",
-							"disabled": true
+							"value": "lights"
 						},
 						{
 							"key": "done",
-							"value": "true",
-							"disabled": true
+							"value": "false"
 						}
 					]
 				}
@@ -71,7 +88,36 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Get Married\",\n    \"risklevel\": \"H\",\n    \"done\": false,\n    \"userid\": 3\n}",
+					"raw": "{\n    \"title\": \"Climb Mt Everest\",\n    \"risklevel\": \"H\",\n    \"done\": false,\n    \"userid\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/bucketlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"bucketlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE BucketList Item BAD REQ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Get Married\",\n    \"userid\": 3\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -100,7 +146,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Run Full Marathon\"\n}",
+					"raw": "{\n    \"done\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -129,7 +175,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3001/api/bucketlist/10",
+					"raw": "http://localhost:3001/api/bucketlist/9",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -138,7 +184,196 @@
 					"path": [
 						"api",
 						"bucketlist",
-						"10"
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET  User By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BucketList By User ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/users/2/bucketlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"2",
+						"bucketlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jane\",\n    \"username\": \"JANE\",\n    \"password\": \"pass123\",\n    \"age\": 40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE User BAD REQ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jane\",\n    \"username\": \"JANE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE User By ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jane Smith\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE User By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"users",
+						"4"
+					],
+					"query": [
+						{
+							"key": "risklevel",
+							"value": "l",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "lights",
+							"disabled": true
+						},
+						{
+							"key": "done",
+							"value": "true",
+							"disabled": true
+						}
 					]
 				}
 			},
