@@ -1,6 +1,9 @@
 // imports the express npm module
 const express = require("express");
 
+// set the PORT
+const PORT = process.env.PORT || 3001;
+
 // imports the cors npm module
 const cors = require("cors");
 
@@ -10,9 +13,9 @@ const Pool = require("pg").Pool;
 // This creates a new connection to our database. Postgres listens on port 5432 by default
 const pool = new Pool({
   user: "postgres",
-  host: "localhost",
+  host: "bucketlist-db-container",
   database: "bucketlist",
-  password: "postgres",
+  password: "docker",
   port: 5432,
 });
 
@@ -387,4 +390,10 @@ app.delete("/api/users/:id", (request, response) => {
 });
 
 // This tells the express application to listen for requests on port 3001
-app.listen("3001", () => {});
+// app.listen("3001", () => {});
+
+server = app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+});
+
+module.exports = {app, server};
